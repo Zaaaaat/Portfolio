@@ -32,14 +32,17 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 const hamburger = document.querySelector(".menu_hamburger");
 const navLinks = document.querySelector(".nav_links");
 const navLinksList = document.querySelectorAll(".nav_links ul li a");
+const image = document.getElementById("burger");
 
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+
 });
 
 navLinksList.forEach((link) => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("open");
+        image.src = "img/logos/white-menuburger.png";
     });
 });
 
