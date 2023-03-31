@@ -36,7 +36,7 @@ const image = document.getElementById("burger");
 
 hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
-
+    image.src = "img/logos/whitecross.png";
 });
 
 navLinksList.forEach((link) => {
