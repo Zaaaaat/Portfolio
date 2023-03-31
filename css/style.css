@@ -85,6 +85,12 @@ header {
     top: 50px;
     right: 50px;
     position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section{
+    margin-top: 10px;
 }
 
 
@@ -533,3 +539,8 @@ h3 {
     line-height: 22px;
     color: grey;
 }
+
+
+
+
+

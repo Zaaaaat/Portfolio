@@ -31,9 +31,16 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
 
 const hamburger = document.querySelector(".menu_hamburger");
 const navLinks = document.querySelector(".nav_links");
+const navLinksList = document.querySelectorAll(".nav_links ul li a");
 
 hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle('open');
+    navLinks.classList.toggle("open");
+});
+
+navLinksList.forEach((link) => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+    });
 });
 
 window.addEventListener("scroll", function() {
@@ -41,7 +48,15 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-
+function changeImage() {
+    var image = document.getElementById('burger');
+    if (image.src.match("burger")) {
+        image.src = "img/logos/whitecross.png";
+    }
+    else {
+        image.src = "img/logos/white-menuburger.png";
+    }
+}
 
 
 
