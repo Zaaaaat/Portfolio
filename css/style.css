@@ -543,6 +543,56 @@ h3 {
     overflow: hidden;
 }
 
+#exp {
+    color: #f1f1f1;
+}
+
+.exp-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.exp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.exp-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.exp-text {
+    margin-left: 20px;
+}
+
+.exp-text h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.exp-text h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.exp-text p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #f1f1f1;
+    margin: 20px 0;
+    width: 100%;
+}
 
 
 
