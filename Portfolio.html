@@ -17,7 +17,7 @@
       <nav class="navbar">
             <a href="#" class="logo"> Portfolio </a>
             <div class ="nav_links ">
-                <ul>
+                <ul id="clickable" onclick="leavescrollblockonul(this)">
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#etudes">Etudes</a></li>
@@ -25,10 +25,14 @@
                     <li><a href="#work">Travail</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+
             </div>
 
-            <img id="burger" src="img/logos/white-menuburger.png" alt="menu" class="menu_hamburger" onclick="changeImage(this)">
-        </nav>
+          <div class="icon_click">
+              <img id="burger" src="img/logos/white-menuburger.png" alt="menu" class="menu_hamburger" onclick="toggleMenu(this)">
+          </div>
+
+      </nav>
 
     <header class="masthead">
 
@@ -52,8 +56,8 @@
                         <li>
                             <h3>Identité</h3>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting   
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever
                                 since the 1500s.
                             </p>
                             <div class="text-color">
@@ -63,9 +67,9 @@
                         <li>
                             <h3>Passions</h3>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting   
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                                since the 1500s. 
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                since the 1500s.
                             </p>
                             <div class="text-color">
                             <h2> PASSIONNÉ & RÊVEUR </h2>
@@ -74,9 +78,9 @@
                         <li>
                             <h3>Qualités</h3>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting   
-                                industry. Lorem Ipsum has been the industry's standard dummy text ever 
-                                since the 1500s. 
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever
+                                since the 1500s.
                             </p>
                             <div class="text-color">
                             <h2> CRÉATIF & APPLIQUÉ </h2>
@@ -108,7 +112,7 @@
                         <p>EN</p>
                         <div class="progressbar-wrapper">
                         <div title="nonfini" class="progressbar en">88%</div>
-                        
+
                         </div>
                     </div>
             </div>
@@ -164,7 +168,7 @@
         <h1> CONTACT </h1>
         </section>
 
-        
+
 
     </main>
 

@@ -22,8 +22,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-bottom: 10px;
-
+    padding-bottom: 10px
 }
 
 .navbar {
@@ -539,6 +538,14 @@ h3 {
     line-height: 22px;
     color: grey;
 }
+
+.lock-scroll {
+    overflow: hidden;
+}
+
+
+
+
 
 
 
