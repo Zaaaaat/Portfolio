@@ -435,7 +435,7 @@ h3 {
 	font-family: 'helvetica', sans-serif;
 	min-height: 25vh;
 	background: #222525;
-	border: 1px solid #2a2c2c;
+    border-bottom: solid 4px #0f5132;
     box-shadow: #000000;
 	text-align: left;
     -webkit-transition: 0.5s;
@@ -622,6 +622,8 @@ h3 {
     overflow: hidden;
 }
 
+/* section experience */
+
 #exp {
     color: #f1f1f1;
 }
@@ -630,6 +632,18 @@ h3 {
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+
+
+.exp-img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+    padding-top: 10px;
 }
 
 .exp-container {

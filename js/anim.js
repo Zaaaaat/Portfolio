@@ -80,6 +80,39 @@ function leavescrollblockonul() {
 
 // Carousel :
 
+$(function() {
+    var carousel = $(".carousel"),
+        items = carousel.find(".carousel__item"),
+        buttons = carousel.find(".carousel__button"),
+        currentIdx = 0;
+
+    // Initialisation du carousel
+    items.eq(currentIdx).addClass("carousel__item--selected");
+    buttons.eq(currentIdx).addClass("carousel__button--selected");
+
+    // Détecter les gestes tactiles
+    carousel.swipe({
+        swipeLeft: function() {
+            if (currentIdx < items.length - 1) {
+                items.eq(currentIdx).removeClass("carousel__item--selected");
+                buttons.eq(currentIdx).removeClass("carousel__button--selected");
+                currentIdx++;
+                items.eq(currentIdx).addClass("carousel__item--selected");
+                buttons.eq(currentIdx).addClass("carousel__button--selected");
+            }
+        },
+        swipeRight: function() {
+            if (currentIdx > 0) {
+                items.eq(currentIdx).removeClass("carousel__item--selected");
+                buttons.eq(currentIdx).removeClass("carousel__button--selected");
+                currentIdx--;
+                items.eq(currentIdx).addClass("carousel__item--selected");
+                buttons.eq(currentIdx).addClass("carousel__button--selected");
+            }
+        },
+        threshold: 50
+    });
+});
 
 
 
