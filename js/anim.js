@@ -1,12 +1,9 @@
-// Sélection de tous les éléments de carousel sur la page
-const carousels = document.querySelectorAll(".carousel");
-
-// Pour chaque carousel, on crée les boutons de navigation
-carousels.forEach((carousel) => {
+document.querySelectorAll(".carousel").forEach((carousel) => {
     const items = carousel.querySelectorAll(".carousel__item");
     const buttonsHtml = Array.from(items, () => {
         return '<span class="carousel__button"></span>';
     });
+
     carousel.insertAdjacentHTML("beforeend", `
     <div class="carousel__nav">
       ${buttonsHtml.join("")}
@@ -14,47 +11,36 @@ carousels.forEach((carousel) => {
   `);
 
     const buttons = carousel.querySelectorAll(".carousel__button");
-    let currentSlideIndex = 0;
 
-    // On ajoute un écouteur d'événement sur chaque bouton de navigation
     buttons.forEach((button, i) => {
         button.addEventListener("click", () => {
-            // On retire la classe "carousel__item--selected" de l'élément courant
-            items[currentSlideIndex].classList.remove("carousel__item--selected");
-            buttons[currentSlideIndex].classList.remove("carousel__button--selected");
+            const current = carousel.querySelector(".carousel__item--selected");
+            const next = items[i];
 
-            // On met à jour l'indice de l'élément courant
-            currentSlideIndex = i;
+            current.classList.remove("carousel__item--selected");
+            next.classList.add("carousel__item--selected");
 
-            // On ajoute la classe "carousel__item--selected" à l'élément cliqué
-            items[currentSlideIndex].classList.add("carousel__item--selected");
-            buttons[currentSlideIndex].classList.add("carousel__button--selected");
+            buttons.forEach((button) => {
+                button.classList.remove("carousel__button--selected");
+            });
+
+            buttons[i].classList.add("carousel__button--selected");
+
+            if (carousel.scrollBy) {
+                carousel.scrollBy({
+                    left: next.offsetLeft - current.offsetLeft,
+                    behavior: "smooth",
+                });
+            } else {
+                carousel.scrollLeft = next.offsetLeft;
+            }
         });
     });
 
-    // On ajoute la classe "carousel__item--selected" au premier élément
-    items[currentSlideIndex].classList.add("carousel__item--selected");
-    buttons[currentSlideIndex].classList.add("carousel__button--selected");
-
-    // Ajout d'un écouteur d'événement sur le carousel pour gérer le swipe sur mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    carousel.addEventListener("touchstart", (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    carousel.addEventListener("touchend", (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-
-        // Si le déplacement horizontal est suffisant, on change de slide
-        if (touchEndX - touchStartX > 50 && currentSlideIndex > 0) {
-            buttons[currentSlideIndex - 1].click();
-        } else if (touchStartX - touchEndX > 50 && currentSlideIndex < items.length - 1) {
-            buttons[currentSlideIndex + 1].click();
-        }
-    });
+    items[0].classList.add("carousel__item--selected");
+    buttons[0].classList.add("carousel__button--selected");
 });
+
 
 
 /* Menu */
