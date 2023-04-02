@@ -255,6 +255,9 @@ section.link-section {
 }
 
 .carousel__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
     padding: 1em;
     font-family: "Montserrat", sans-serif;
@@ -341,6 +344,8 @@ carousel__button:focus {
     font-style: italic;
     text-shadow: 1px 1px 2px black;
 }
+
+
 
 /* section carousel */
 
@@ -726,12 +731,6 @@ hr {
 #contact a:link {
     color: #0f5132;
 }
-
-
-
-
-
-
 
 
 
