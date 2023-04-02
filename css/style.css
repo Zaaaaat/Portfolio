@@ -251,6 +251,7 @@ section.link-section {
     margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding-bottom: 250px;
 
 }
 
@@ -694,44 +695,86 @@ hr {
 
 /* Section contact */
 
-#contact {
+.container-contact {
+    background-color: #121212;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 200px;
 }
 
-#contact h2 {
-    font-size: 24px;
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.form-group {
     margin-bottom: 20px;
 }
 
-#contact p {
-    font-size: 18px;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
     margin-bottom: 20px;
 }
 
-#contact a {
-    font-size: 18px;
-    margin-bottom: 20px;
+.contact-info p {
+    margin-bottom: 10px;
 }
 
-#contact a:hover {
-    color: #0f5132;
+.contact__social a {
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
 }
 
-#contact a:active {
-    color: #0f5132;
+.contact__social i {
+    margin-right: 10px;
 }
 
-#contact a:visited {
-    color: #0f5132;
+#firstDivContact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-#contact a:link {
-    color: #0f5132;
+#secondDivContact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
-
-
-
 
